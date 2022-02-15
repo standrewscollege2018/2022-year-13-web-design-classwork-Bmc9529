@@ -1,0 +1,13 @@
+.bg-brightred {
+  background-color: red;
+}
+
+.text-green {
+  color: #15ff00;
+}
+
+/* doesnt override sizing just font and color */
+.display-2 {
+  font-family: cursive;
+  color: red;
+}
