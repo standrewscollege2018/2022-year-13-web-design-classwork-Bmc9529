@@ -14,10 +14,12 @@
     <!-- where to change bg  -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-blue">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="Images/logo.png" alt="Stac Logo"></a>
+        <a class="navbar-brand" href="Stac.html"><img src="Images/logo.png" alt="Stac Logo"></a>
+        <!-- burger menu -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- means burger menu is display under a curtain size -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item rounded">
@@ -38,56 +40,55 @@
               </ul>
             </li>
           </ul>
-          <form class="d-flex">
-            <!-- Button trigger modal -->
-            <!-- <div class="p-0"> -->
-              <button type="button" class="btn w-75 text-light" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="material-icons">pregnant_woman</span>Book A Tour <i class="bi bi-chevron-down"></i></button>
-            <!-- </div> -->
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-scrollable">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Book a Tour</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="col bg-light border rounded p-4">
-                      <div class="mb-3">
-                        <!-- Means when you click on text in label it brings you to tied item with the same id in the for="" -->
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <!-- Id is same as labels for therefore the label links to the input -->
-                        <!-- aria-describedby is for page readers -->
-                        <!-- ID can be whatever, they dont seem to have give it styling -->
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@gmail.com">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                      </div>
-                      <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                        <div id="passwordHelpBlock" class="form-text">
-                          Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
-                        </div>
-                      </div>
-                      <div class="mb-3">
-                        <label for="Question" class="form-label">Question</label>
-                        <textarea class="form-control" id="Question" rows="4" cols="1"></textarea>
-                      </div>
-                      <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                      </div>
-                      <button type="submit" class="btn btn-danger">Submit</button>
+          <!-- as ul has me-auto it will cause any code after to go to the end of the page (right) -->
+          <!-- Button trigger modal -->
+          <button type="button" class="btn text-light" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="material-icons">pregnant_woman</span>Book A Tour <i class="bi bi-chevron-down"></i></button>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Book a Tour</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="col bg-light border rounded p-4">
+                    <div class="mb-3">
+                      <!-- Means when you click on text in label it brings you to tied item with the same id in the for="" -->
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <!-- Id is same as labels for therefore the label links to the input -->
+                      <!-- aria-describedby is for page readers -->
+                      <!-- ID can be whatever, they dont seem to have give it styling -->
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@gmail.com">
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                     </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                      <div id="passwordHelpBlock" class="form-text">
+                        Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="Question" class="form-label">Question</label>
+                      <textarea class="form-control" id="Question" rows="4" cols="1"></textarea>
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Submit</button>
                   </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <!-- use data-bs-dismiss to close it -->
-                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <!-- use data-bs-dismiss to close it -->
                 </div>
               </div>
             </div>
-            <!-- end of modal -->
+          </div>
+          <!-- end of modal -->
+          <form class="d-flex">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Search" aria-label="Example text with button addon" aria-describedby="button-addon1">
               <button class="btn btn-outline-secondary text-light" type="button" id="button-addon1"><i class="bi bi-search"></i></button>
@@ -96,6 +97,14 @@
         </div>
       </div>
     </nav>
+
+    <!-- main content -->
+    <div class="container-fluid">
+      <div class="col m-4 bg-light">
+
+        <div class="dropdown-divider"></div>
+      </div>
+    </div>
 
 
     <!-- javascript down here -->
