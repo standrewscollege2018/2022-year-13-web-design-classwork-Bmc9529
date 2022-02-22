@@ -1,0 +1,22 @@
+.bg-blue {
+  background-color: #003155;
+}
+.bg-light-blue {
+  background-color: #e9ecef;
+}
+
+.nav-item:hover {
+  background-color: #004475;
+}
+
+.nav-item {
+  transition: 0.5s ease-out;
+}
+
+.dropdown-menu {
+  background-color: #003155;
+  transition: 0.5s ease-out;
+}
+.dropdown-item {
+  transition: 0.5s ease-out;
+}
