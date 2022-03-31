@@ -22,8 +22,5 @@ if(strlen($_POST['Tutorcode'])!= 3 or strlen($_POST['Tutorname'])<=1) {
     </form>
     <?php
   }
-
 }
-
-
-   ?>
+?>
