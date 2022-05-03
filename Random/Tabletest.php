@@ -10,23 +10,23 @@
     <script type="text/javascript">
     // This function takes the studentID entered and gets their details
     // The studentDetails.php page is then updated
-    function selectStudent(studentID) {
+    function selectstudent(studentID) {
 
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("log").innerHTML = this.responseText;
+        document.getElementById("student").innerHTML = this.responseText;
       }
     };
     xmlhttp.open("GET","studentDetails.php?studentID="+studentID,true);
     xmlhttp.send();
     }
 
-    </script>
+  </script>
   </head>
   <body>
-    <input type="text" name="studentID" value="" onkeyup="selectStudent(this.value)">
-    
+    <button type="button" onclick="selectstudent(this.value)" value="1">Button 1</button>
+    <button type="button" onclick="selectstudent(this.value)" value="2">Button 2</button>
     <div class="container-fluid">
       <div class="col-4">
         <!-- put table striped here -->
@@ -43,6 +43,8 @@
           </thead>
           <!-- tbody is always aligned top -->
           <tbody >
+            <tr id="student">
+            </tr>
             <tr class="align-middle">
               <th scope="col">1</th>
               <!-- TD isnt bold th is -->
