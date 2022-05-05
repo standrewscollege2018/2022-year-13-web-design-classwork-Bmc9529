@@ -13,6 +13,9 @@ include 'dbconnect.php';
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
      <link rel="stylesheet" href="custom.css">
      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
      <script type="text/javascript">
      // This function takes the studentID entered and gets their details
      // The studentDetails.php page is then updated
@@ -29,8 +32,8 @@ include 'dbconnect.php';
      }
      </script>
      <script type="text/javascript">
-        $(function() {
-          $( "#term" ).autocomplete({source: 'autocomplete.php',});});
+       $(function() {$( "#term" ).autocomplete({source: 'autocomplete.php',});});
+     </script>
       </script>
    </head>
    <body>
@@ -38,7 +41,7 @@ include 'dbconnect.php';
        <div class="row">
          <div class="col">
            <form class="input-group input-group-lg mt-3" action="Postto.php" method="post">
-             <input class="form-control input-lg" type="text" autocomplete="off" placeholder="Search Here..." name="search" id="search" value="">
+             <input class="form-control input-lg" type="text" id="term" placeholder="Search Here..." name="term" value="">
              <button class="btn btn-primary" type="submit">Submit</button>
            </form>
          </div>
