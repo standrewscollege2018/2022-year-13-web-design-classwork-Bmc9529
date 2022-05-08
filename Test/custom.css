@@ -1,0 +1,25 @@
+.bg-red {background-color: #660000;}
+.bg-light-red {background-color: #8F0202;}
+.bg-input-red:focus{background-color: #660000;color: white;}
+.bg-input-red{background-color: #660000;color: white;}
+.placeholder-white::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */color: white;opacity: 1; /* Firefox */}.placeholder-white:-ms-input-placeholder { /* Internet Explorer 10-11 */color: white;}.placeholder-white::-ms-input-placeholder { /* Microsoft Edge */color: white;}
+.form-check-input:checked {background-color: #660000!important;border-color: #660000;}
+.form-check-input:checked:focus {box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 0, 0, 0.25);border-color: #660000;}
+.form-check-input:focus {box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 0, 0, 0.25);border-color: lightgrey;}
+.form-check-input {border-radius: 0.25rem!important;}
+.display-7{font-size: 1.75rem;}
+.display-8{font-size: 1.25rem;}
+.w-overide-0 {width: 0%!important;}
+.color-white {color: white!important;}
+.dropdown-menu-red {background-color: #660000;}
+.dropdown-menu-red .dropdown-item{color: white;}
+.dropdown-menu-red .dropdown-item:hover{background-color: rgba(255,255,255,0.1);}
+
+.nav-item {
+  transition: 0.5s ease-out;
+}
+
+
+.border-red {
+  border-color: #660000;
+}

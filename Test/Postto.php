@@ -1,7 +1,4 @@
-<?php
-session_start();
-include 'dbconnect.php';
- ?>
+
  <!DOCTYPE html>
  <html lang="en" dir="ltr">
    <head>
@@ -19,48 +16,46 @@ include 'dbconnect.php';
      <script type="text/javascript">
      // This function takes the studentID entered and gets their details
      // The studentDetails.php page is then updated
-     function selectstudent(studentID) {
-
-       var xmlhttp = new XMLHttpRequest();
-       xmlhttp.onreadystatechange = function() {
-       if (this.readyState == 4 && this.status == 200) {
-         document.getElementById("studenttable").innerHTML = this.responseText;
-       }
-     };
-     xmlhttp.open("GET","studentDetails.php?studentID="+studentID,true);
-     xmlhttp.send();
-     }
+     // function selectstudent(studentID) {
+     //
+     //   var xmlhttp = new XMLHttpRequest();
+     //   xmlhttp.onreadystatechange = function() {
+     //   if (this.readyState == 4 && this.status == 200) {
+     //     document.getElementById("studenttable").innerHTML = this.responseText;
+     //   }
+     // };
+     // xmlhttp.open("GET","studentDetails.php?studentID="+studentID,true);
+     // xmlhttp.send();
+     // }
      </script>
      <script type="text/javascript">
        $(function() {$( "#term" ).autocomplete({source: 'autocomplete.php',});});
      </script>
-      </script>
    </head>
    <body>
-
      <div class="container">
        <div class="row">
          <div class="col">
            <form class="input-group input-group-lg mt-3" action="Postto.php" method="post">
-             <input class="form-control input-lg" type="text" id="term" placeholder="Search Here..." name="term" value="">
+             <input class="form-control input-lg" type="text" id="term" placeholder="Search Here..." name="something" value="">
              <button class="btn btn-primary" type="submit">Submit</button>
            </form>
          </div>
        </div>
      </div>
      <?php
-     if (isset($_POST['search'])) {
-       $studentID = $_POST['search'];
-       if ($studentID == -1) {
-         session_unset();
-       } else {
-         if(isset($_SESSION['students'])){
-           array_push($_SESSION['students'],$studentID);
-         } else {
-           $_SESSION['students']=[$studentID];
-         }
-       }
-     }
+     // if (isset($_POST['search'])) {
+     //   $studentID = $_POST['search'];
+     //   if ($studentID == -1) {
+     //     session_unset();
+     //   } else {
+     //     if(isset($_SESSION['students'])){
+     //       array_push($_SESSION['students'],$studentID);
+     //     } else {
+     //       $_SESSION['students']=[$studentID];
+     //     }
+     //   }
+     // }
       ?>
 
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

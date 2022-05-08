@@ -2,32 +2,28 @@
 require_once "dbconnect.php";
 $res = array();
 if (isset($_GET['term'])) {
-  // $name = $_GET['term'];
-  $name = "Donald Duck";
+  $name = $_GET['term'];
   $names = explode(" ", $name);
   $amount = count($names)-1;
-  if (count($names) == 1) {
-    $query = "SELECT studentID, firstname, lastname FROM student WHERE firstname LIKE '%$names[0]%' OR lastname LIKE '%$names[0]%' LIMIT 5";
-  }elseif ((count($names) == 1) and ()) {
-    // code...
-  } else {
-    $query = "SELECT studentID, firstname, lastname FROM student WHERE (firstname LIKE '%$names[$amount]%' OR lastname LIKE '%$names[$amount]%') AND (studentID IN (". implode(',', $filter) . ")) LIMIT 5";
+  $query = "SELECT studentID, firstname, lastname FROM student WHERE (firstname LIKE '%$names[0]%' OR lastname LIKE '%$names[0]%')";
+  if (count($names) >1) {
+    foreach ($names as $value) {
+        $query = $query." AND (firstname LIKE '%$value%' OR lastname LIKE '%$value%') ";
+      }
   }
-  $filter = array();
+  $query = $query." Limit 5";
   $result = mysqli_query($dbconnect, $query);
 
   if (mysqli_num_rows($result) > 0) {
     while ($user = mysqli_fetch_array($result)) {
-      $name = $user['firstname']." ".$user['lastname'];
+      $name = "(".$user['studentID'].") ".$user['firstname']." ".$user['lastname'];
       $studentID = $user['studentID'];
-      array_push($res, $name, $studentID);
-      array_push($filter, $studentID);
+      array_push($res, $name);
     }
   } else {
     $res = array();
   }
   //return json res
-  print_r($res);
-  // echo json_encode($res);
+  echo json_encode($res);
 }
 ?>
