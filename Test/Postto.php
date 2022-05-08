@@ -13,6 +13,7 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
+
      <script type="text/javascript">
      // This function takes the studentID entered and gets their details
      // The studentDetails.php page is then updated
@@ -43,6 +44,14 @@
          </div>
        </div>
      </div>
+       <form class="" action="index.html" method="post">
+         <form action="session.php" method="get">
+           <button type="submit" name="yes" value="yes">inside</button>
+         </form>
+         <button type="submit" name="button">outside</button>
+       </form>
+
+
      <?php
      // if (isset($_POST['search'])) {
      //   $studentID = $_POST['search'];
