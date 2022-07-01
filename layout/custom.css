@@ -1,0 +1,80 @@
+.bg-red {background-color: #660000;}
+.bg-light-red {background-color: #8F0202;}
+.bg-input-red:focus{background-color: #660000;color: white;}
+.bg-input-red{background-color: #660000;color: white;}
+.placeholder-white::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */color: white;opacity: 1; /* Firefox */}.placeholder-white:-ms-input-placeholder { /* Internet Explorer 10-11 */color: white;}.placeholder-white::-ms-input-placeholder { /* Microsoft Edge */color: white;}
+.form-check-input:checked {background-color: #660000!important;border-color: #660000;}
+.form-check-input:checked:focus {box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 0, 0, 0.25);border-color: #660000;}
+.form-check-input:focus {box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 0, 0, 0.25);border-color: lightgrey;}
+.form-check-input {border-radius: 0.25rem!important;}
+.display-7{font-size: 1.75rem;}
+.display-8{font-size: 1.25rem;}
+.display-9{font-size: 1rem;}
+.w-overide-0 {width: 0%!important;}
+.color-white {color: white!important;}
+.dropdown-menu-red {background-color: #660000;}
+.dropdown-menu-red .dropdown-item{color: white;}
+.dropdown-menu-red .dropdown-item:hover{background-color: rgba(255,255,255,0.1);}
+.scroll {max-height: 35vh;overflow: auto;}
+.scroll-large {max-height: 65vh;overflow: auto;}
+.scroll-xlarge {max-height: 83.3vh;overflow: auto;}
+.bg-white{background-color: #FFFFFF}
+.arrow-select-none {-webkit-appearance: none;-moz-appearance: none;text-indent: 1px;text-overflow: '';}
+.border-red {border-color: #660000;}
+.cursor-pointer {cursor: pointer!important;}
+
+.rounded-4 {
+  border-radius: 1rem;
+}
+
+
+.nav-item {
+  transition: 0.5s ease-out;
+}
+/* .admin-btn{
+  width: auto;
+  background-color: #660000;
+  color: white;
+  padding: 10px;
+
+} */
+
+.btn-admin {
+  height: 100px;
+}
+.btn-select{
+  border-width: 0px;
+}
+.sortlinks {
+  color: black;
+  text-decoration: none;
+
+}
+.form-download{
+  font-size: 35px;
+  border-radius: 20px;
+  padding-left: 50px;
+  padding-bottom: 10px;
+}
+.btn-download{
+  width: 100px;
+  font-size: 30px;
+}
+.form-select{
+  background-image:url(https://popupfilmresidency.org/wp-content/uploads/2019/05/white-down-arrow-png-2.png);
+}
+/* .setpassword{
+  border: none;
+  border-bottom: 2px solid grey;
+  margin: 10px;
+  outline-offset: 0px;
+  outline: none;
+}
+.setpasswordform{
+  margin-top: 20%;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+.setpasswordbutton{
+  padding-top: 100px;
+} */
